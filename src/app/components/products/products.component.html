@@ -1,4 +1,5 @@
 <div class="products--grid">
+  <button (click)="createNewProduct()">Create</button>
   <app-product [product]="product" *ngFor="let product of products" (addedProduct)="onAddToShoppingCart($event)"
     (showProduct)="onShowDetail($event)"></app-product>
 </div>
@@ -15,5 +16,9 @@
 
     </swiper>
     <p>{{ productChosen.description }}</p>
+    <button (click)="updateProduct()">Edit</button>
+    <button (click)="deleteProduct()" >Delete</button>
   </div>
 </div>
+<button (click)="loadMore()">Load More</button>
+
